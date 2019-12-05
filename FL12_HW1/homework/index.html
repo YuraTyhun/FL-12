@@ -12,10 +12,8 @@
     <div id="main">
       <div id="container">
         <div id="content" role="main">
-         <header>
-             <img src="logo.png" alt="epam_logo">
-         </header>
-         <section id="home">    
+         <header id="home">
+             <img src="logo.png" alt="epam_logo">    
              <h1>HTML Elements</h1>
              <hr>
              <nav>
@@ -27,7 +25,9 @@
                  <a href="#blockquotes-section"><b>Blockquotes</b></a>
                  <a href="#reg-form"><b>Registration</b></a>
              </nav>
+          </header>
              <hr>
+             <main>
              <p>Lorem ipsum dolor sit amet, <a href="#">test link</a> adipiscing elit.
                 Nullam dignissim convallis est. Quisque aliquam.
                 <em>This is emphasized.</em> Donec faucibus. Nunc iaculis suscipit dui. 
@@ -46,7 +46,7 @@
                 massa quis luctus fermentum. To copy a file type <samp><small>COPY</small></samp> <var>filename.</var> 
                 <del>The meeting began at 7pm </del> <ins>Let’s make that 6.</ins> This <del>text</del> has been struck.
              </p>
-         </section>
+
          <hr>
          
          <section id="heading-section">
@@ -175,9 +175,9 @@ both      <b>spaces</b> and
              <h2>Blockquotes</h2>
              <p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
              <blockquote>
-                 <span>"So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, 
-                     make it easy to read."</span>
-                 <p><a href="#">Robert C. Martin (Uncle Bob)</a></p>
+                 "So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, 
+                  make it easy to read." <br/>
+                 <a href="#">Robert C. Martin (Uncle Bob)</a>
              </blockquote>
          </section>
          <hr>
@@ -201,6 +201,7 @@ both      <b>spaces</b> and
                      <button type="submit">Submit</button>
                  </fieldset>
              </form>
+         </main>
          <footer>
              &copy; Copyright Epam Systems
          </footer>
