@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 1920px;
+  height: 2334px;
+  background-color: #fff; }
+
+.header-wrap .header_heading:after, main p.section_text:after, main .section_banner .section_banner_text_wrap .section_banner_heading:after {
+  position: absolute;
+  background-color: #14a0c7;
+  content: "";
+  z-index: -1; }
+
+.header-wrap .landing-logo p, .footer .footer-wrap .landing-logo p {
+  padding-left: 15px;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 30px; }
+
+.header-wrap .landing-logo p span, .footer .footer-wrap .landing-logo p span {
+  display: block;
+  font-size: 0.45em;
+  text-align: center;
+  line-height: 20px; }
+
+.header-wrap {
+  height: 700px;
+  background-image: url(../img/m-h-day.jpg);
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  border-radius: 0 0 40% 0;
+  padding: 20px 50px 0 192px;
+  color: #2c2f3c; }
+  .header-wrap img {
+    height: 100%; }
+  .header-wrap .landing-logo {
+    display: flex;
+    font-family: "Hind", sans-serif; }
+  .header-wrap .header_heading {
+    padding-top: 60px;
+    font-size: 4.5em;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 500px;
+    line-height: 80px;
+    position: relative;
+    z-index: 1; }
+    .header-wrap .header_heading:after {
+      left: 0px;
+      bottom: 5px;
+      width: 305px;
+      height: 50px; }
+  .header-wrap .header_text {
+    width: 650px;
+    padding-top: 25px;
+    font-style: normal;
+    white-space: pre-line;
+    line-height: 25px;
+    font-size: 1em;
+    font-family: "Hind", sans-serif; }
+  .header-wrap div:last-child {
+    margin-top: 60px;
+    font-weight: bold; }
+    .header-wrap div:last-child button {
+      border: none;
+      border-radius: 5px;
+      background-color: #699900;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1em;
+      padding: 14px 44px; }
+      .header-wrap div:last-child button:focus {
+        outline: none; }
+    .header-wrap div:last-child .login {
+      color: #fff;
+      font-family: 'Source Sans Pro', sans-serif;
+      padding-left: 150px;
+      font-size: 1.15em; }
+      .header-wrap div:last-child .login:hover {
+        color: #fffa63; }
+      .header-wrap div:last-child .login:active {
+        color: #66eaff; }
+
+main {
+  font-family: 'Source Sans Pro', sans-serif; }
+  main p.section_text {
+    text-align: center;
+    padding: 35px 0px;
+    font-size: 2.7em;
+    font-weight: 500;
+    color: #2c2f3c;
+    position: relative;
+    z-index: 1; }
+    main p.section_text:after {
+      left: 968px;
+      bottom: 45px;
+      width: 191px;
+      height: 47px; }
+  main .section_card_wrap {
+    width: 58%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .section_card_wrap div.section_card:nth-child(n+2) {
+      margin-top: 30px; }
+    main .section_card_wrap .section_card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #21232e;
+      margin-top: 10px;
+      padding: 20px;
+      border-radius: 5px;
+      line-height: 25px; }
+      main .section_card_wrap .section_card .section_card_img {
+        width: 40%;
+        border-radius: 5px; }
+      main .section_card_wrap .section_card .section_card_right_container {
+        width: 60%;
+        text-align: center; }
+        main .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+          font-size: 1.5em;
+          font-weight: 600;
+          margin-top: 10px;
+          color: #fff; }
+        main .section_card_wrap .section_card .section_card_right_container .section_card_text {
+          margin: 50px 75px 25px;
+          text-align: justify;
+          font-size: 1.1em;
+          color: #c0c3ce;
+          font-family: "Hind", sans-serif; }
+        main .section_card_wrap .section_card .section_card_right_container .section_link {
+          color: #c0c3ce;
+          font-family: 'Source Sans Pro', sans-serif; }
+          main .section_card_wrap .section_card .section_card_right_container .section_link:hover {
+            color: #fffa63; }
+          main .section_card_wrap .section_card .section_card_right_container .section_link:active {
+            color: #66eaff; }
+  main .section_banner {
+    background: linear-gradient(to right, #649410, #2d5bd5);
+    width: 1100px;
+    height: auto;
+    margin: 55px auto 0;
+    border-radius: 5px;
+    padding: 10px 50px 40px;
+    position: relative;
+    bottom: -75px;
+    z-index: 1; }
+    main .section_banner .section_banner_text_wrap {
+      display: inline-block;
+      margin-left: 110px; }
+      main .section_banner .section_banner_text_wrap .section_banner_heading {
+        margin-top: 15px;
+        font-size: 1.9em;
+        font-weight: bold;
+        color: #2c2f3c;
+        position: relative;
+        z-index: 1; }
+        main .section_banner .section_banner_text_wrap .section_banner_heading:after {
+          left: 120px;
+          bottom: 0px;
+          width: 65px;
+          height: 50px; }
+      main .section_banner .section_banner_text_wrap .section_banner_text {
+        margin-top: 25px;
+        color: #c0c3ce;
+        font-family: "Hind", sans-serif; }
+    main .section_banner button {
+      border: none;
+      border-radius: 5px;
+      background-color: #699900;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1em;
+      padding: 14px 44px;
+      float: right;
+      margin: 40px 110px 0 0; }
+      main .section_banner button:focus {
+        outline: none; }
+
+.footer {
+  background-color: #21232e;
+  height: 250px;
+  padding-left: 192px;
+  font-family: "Hind", sans-serif;
+  color: #c0c3ce; }
+  .footer .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end; }
+    .footer .footer-wrap img {
+      height: 100%; }
+    .footer .footer-wrap .landing-logo {
+      display: flex;
+      margin-bottom: 70px; }
+    .footer .footer-wrap .footer_text {
+      width: 300px;
+      margin-left: 450px;
+      margin-bottom: 65px;
+      font-size: 0.9em; }
+    .footer .footer-wrap .footer-cr {
+      margin-left: 465px;
+      margin-bottom: 80px;
+      font-size: 1em; }

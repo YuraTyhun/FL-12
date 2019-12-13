@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1920px;
+    height: 2334px;
+    background-color: $bg-body-color;
+}
+
+$display: ("f":flex, "b":block, "i-b":inline-block);
+
+@mixin btn-style {
+    border: none;
+    border-radius: 5px;
+    background-color: $button-bg-color;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 14px 44px;
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin link-style {
+
+        font-family: 'Source Sans Pro', sans-serif;
+        &:hover {
+            color: $link-hover;
+        }
+        &:active {
+            color: $link-active;
+        }
+}
+
+%position {
+    position: absolute;
+    background-color: $pseudo-bg-color; 
+    content: "";
+    z-index: -1;
+    
+}
+
+%p-logo {
+    padding-left: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+%span-logo {
+    display: map-get($display, "b");
+    font-size: 0.45em;
+    text-align: center;
+    line-height: 20px;
+}
+
+.header-wrap {
+    height: 700px;
+    background-image: $header-bg-img;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    border-radius: 0 0 40% 0;
+    padding: 20px 50px 0 192px;
+    color: $header-txt-color;
+    
+    img {
+        height: 100%;
+    }
+
+
+.landing-logo {
+        
+        display: map-get($display, "f");
+        font-family: $header-paragraph-font-style;
+
+        p {
+            @extend %p-logo;
+
+            span {
+                @extend %span-logo;
+            }
+        }
+    }
+
+    .header_heading {
+        padding-top: 60px;
+        font-size: 4.5em;
+        font-weight: bold;
+        font-family: 'Source Sans Pro', sans-serif;
+        width: 500px;
+        line-height: 80px;
+        position: relative;
+        z-index: 1;
+        
+        
+        &:after {
+            @extend %position;
+            left: 0px;
+            bottom: 5px;
+            width: 305px;
+            height: 50px;
+        }  
+    }
+
+    .header_text {
+        width: 650px;
+        padding-top: 25px;
+        font-style: normal;
+        white-space: pre-line;
+        line-height: 25px;
+        font-size: 1em;
+        font-family: $header-paragraph-font-style;
+    }
+
+    div:last-child {
+        margin-top: 60px;
+        font-weight: bold;
+
+        button {
+            @include btn-style; 
+        }
+
+        .login { 
+            color: #fff;
+            @include link-style;
+            padding-left: 150px;
+            font-size: 1.15em;  
+        }
+    }
+}
+
+
+main {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    p.section_text {
+        text-align: center;
+        padding: 35px 0px;
+        font-size: 2.7em;
+        font-weight: 500;
+        color: $section-header-color;
+        position: relative;
+        z-index: 1;
+        
+        &:after {
+            @extend %position;
+            left: 968px;
+            bottom: 45px;
+            width: 191px;
+            height: 47px;
+        } 
+    }
+
+    .section_card_wrap {
+        width: 58%;
+        margin: 0 auto;
+        display: map-get($display, "f");
+        flex-direction: column;
+        align-items: center;
+        
+        div.section_card:nth-child(n+2) {
+                margin-top: 30px;
+            }
+
+        .section_card {
+            display: map-get($display, "f");
+            flex-direction: row;
+            align-items: center;
+            background-color: $card-bg-color;
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            line-height: 25px;
+            
+            .section_card_img {
+                width: 40%;
+                border-radius: 5px;
+            }
+
+            .section_card_right_container {
+                width: 60%;
+                text-align: center;
+        
+                .section_card_heading {
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    margin-top: 10px;
+                    color: #fff;   
+                }
+                
+                .section_card_text {
+                    margin: 50px 75px 25px;
+                    text-align: justify;
+                    font-size: 1.1em;
+                    color: #c0c3ce;
+                    font-family: $card-text-style;      
+                }
+                
+                .section_link {
+                    color: #c0c3ce;
+                   @include link-style; 
+                }
+            }
+        }
+    }
+    
+    .section_banner {
+        background: $banner-bg-gradient;
+        width: 1100px;
+        height: auto;
+        margin: 55px auto 0;
+        border-radius: 5px;
+        padding: 10px 50px 40px;
+        position: relative;
+        bottom: -75px;
+        z-index: 1;
+        
+        .section_banner_text_wrap {
+            display: map-get($display, "i-b");
+            margin-left: 110px;
+            
+            .section_banner_heading {
+                margin-top: 15px;
+                font-size: 1.9em;
+                font-weight: bold;
+                color: $banner-header-color;
+                position: relative;
+                z-index: 1;
+
+                &:after {
+                    @extend %position;
+                    left: 120px;
+                    bottom: 0px;
+                    width: 65px;
+                    height: 50px;
+                }
+            }
+            
+            .section_banner_text {
+                margin-top: 25px;
+                color: #c0c3ce;
+                font-family: $banner-text-style;
+            }   
+        }
+        
+        button {
+            @include btn-style;
+            float: right;
+            margin: 40px 110px 0 0;
+        }   
+    }
+}
+
+.footer {
+    background-color: $footer-bg-color;
+    height: 250px;
+    padding-left: 192px;
+    font-family: $footer-font-style;
+    color: #c0c3ce;
+    
+    .footer-wrap {
+        display: map-get($display, "f");
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        align-items: flex-end;
+        
+        img {
+        height: 100%;
+    }
+        
+        .landing-logo {
+            display: map-get($display, "f");
+            margin-bottom: 70px;
+            
+            p {
+                @extend %p-logo;
+                
+                span {
+                    @extend %span-logo;
+                }
+            }
+        }
+
+        .footer_text {
+            width: 300px;
+            margin-left: 450px;
+            margin-bottom: 65px;
+            font-size: 0.9em;
+        }
+
+        .footer-cr {
+            margin-left: 465px;
+            margin-bottom: 80px;
+            font-size: 1em;
+        }
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
