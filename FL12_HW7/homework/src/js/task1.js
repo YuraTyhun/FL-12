@@ -1,5 +1,4 @@
 let email = prompt('Please, enter your e-mail address');
-console.log(email);
 let password, changePass, oldPass, newPass, repeatPass;
 const MIN_EMAIL_LENGTH = 5;
 const MIN_PASS_LENGTH = 6;
@@ -17,22 +16,18 @@ if (email === '' || email === null) {
         alert('Wrong password');
     } else {
         changePass = confirm('Do you want to change your password?');
-        console.log(changePass);
         if (changePass) {
             oldPass = prompt('Write the old password');
-            console.log(oldPass);
             if (oldPass === '' || oldPass === null) {
                 alert('Canceled');
             } else if (oldPass === password) {
                 newPass = prompt('Please, write the new password');
-                console.log(newPass);
                 if (newPass === '' || newPass === null) {
                     alert('Canceled');
                 } else if (newPass.length < MIN_PASS_LENGTH) {
                     alert('It\'s to short password. Sorry.');
                 } else {
                     repeatPass = prompt('Please, write the password again');
-                    console.log(repeatPass);
                     if (repeatPass !== newPass) {
                         alert('You wrote the wrong password.');
                     } else {
