@@ -129,7 +129,7 @@ function formatDate(date) {
   month = date.getMonth() + 1,
   day = date.getDate(),
   hours = date.getHours() < e ? `0${date.getHours()}` : date.getHours(),
-  minutes = date.getMinutes();
+  minutes = date.getMinutes() < e ? `0${date.getMinutes()}` : date.getMinutes();
 return `${year}/${month}/${day} ${hours}:${minutes}`;
 }
 formatDate(new Date('6/15/2018 09:15:00'));
