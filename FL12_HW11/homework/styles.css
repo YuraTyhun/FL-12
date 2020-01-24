@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+h4 {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    display: flex;
+}
+
+h4:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+i {
+    color: #d1d4d1;
+}
+
+.folder i {
+    color: #eae000;
+}
