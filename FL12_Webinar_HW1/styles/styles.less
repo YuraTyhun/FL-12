@@ -1,0 +1,69 @@
+@import 'variables.less';
+
+.heading {
+    color: @blue;
+    margin-top: 20px;
+}
+
+hr {
+    margin-top: unset;
+}
+
+.navbar {
+    padding: unset;
+    .navbar-nav {
+        .nav-item {
+            padding: 5px 10px;
+        }
+        .active {
+            background-color: @blue;
+            > .nav-link {
+                color: @white;  
+            }
+        }
+    }
+}
+
+.figure {
+    padding: 1px;
+    .figure-caption {
+        color: @white;
+    }
+}
+
+.cards {
+    font-weight: 500;
+    &__red {
+        background-color: @red;
+        &--cardio {
+            padding: 5px;
+        }
+    }
+
+    &__blue {
+        background-color: @blue;
+        &--fitness {
+            padding: 5px;
+        }
+    }
+
+    &__orange {
+        background-color: @orange;
+        &--zumba {
+            padding: 5px;
+        }
+    }
+    
+    &__green {
+        background-color: @green;
+        &--bootcamp {
+            padding: 5px;
+        }
+    }
+}
+
+.footer-content {
+    background-color: @grey;
+}
+
+
