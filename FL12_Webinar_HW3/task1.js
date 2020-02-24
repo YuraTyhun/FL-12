@@ -56,16 +56,25 @@ class Deck {
     }
 }
 
+const _wins = Symbol();
 class Player {
     constructor(name) {
         this.name = name;
         this.deck = new Deck();
-        this.wins = 0;
+        this[_wins] = 0;
+    }
+
+    winInc() {
+        this[_wins] += 1;
+    }
+
+    get wins(){
+        return this[_wins];
     }
     
     static init(player) {
         player.deck = new Deck();
-        player.wins = 0;
+        player[_wins] = 0;
     }
 
     static Play(playerOne, playerTwo) {
@@ -78,10 +87,10 @@ class Player {
         while(p1 > 0 && p2 > 0) {
             if (Card.Compare(p1Cards[p1 - 1], p2Cards[p2 - 1]) === 1) {
                 console.log(`${playerOne.name} with ${p1Cards[p1 - 1]} WINS ${playerTwo.name} with ${p2Cards[p2 - 1]}`);
-                playerOne.wins++;
+                playerOne.winInc();
             } else if (Card.Compare(p1Cards[p1 - 1], p2Cards[p2 - 1]) === -1) {
                 console.log(`${playerTwo.name} with ${p2Cards[p2 - 1]} WINS ${playerOne.name} with ${p1Cards[p1 - 1]}`);
-                playerTwo.wins++;
+                playerTwo.winInc();
             } else if (Card.Compare(p1Cards[p1 - 1], p2Cards[p2 - 1]) === 0) {
                 console.log(`${playerOne.name} with ${p1Cards[p1 - 1]} DRAW ${playerTwo.name} with ${p2Cards[p2 - 1]}`);
             }
@@ -96,7 +105,7 @@ class Player {
         } else if (playerOne.wins < playerTwo.wins) {
             console.log(`${playerTwo.name} wins ${playerOne.name} ${playerTwo.wins} to ${playerOne.wins}`);
         } else {
-            console.log(`Draw!!! GAME OVER!!! ${playerOne.wins} to ${playerTwo.wins}`);
+            console.log(`Draw!!! GAME OVER!!! ${playerOne.name} ${playerOne.wins} --- ${playerTwo.name} ${playerTwo.wins}`);
         }
         Player.init(playerOne)
         Player.init(playerTwo);
