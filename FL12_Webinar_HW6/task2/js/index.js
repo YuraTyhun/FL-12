@@ -5,16 +5,21 @@ const $item = $(".item");
 
 let todos = [];
 
-// load data from local storage and display
-if(localStorage.getItem("todoList")) {
-  todos = JSON.parse(localStorage.getItem("todoList"));
-  $(todos).each((i,elem) => {
-    let done = elem.done ? 'done' : '';
-    let listItem = `<li class="item"><span class="item-text ${done}">${elem.text}</span>
-      <button class="item-remove">Remove</button></li>`;
-    $(".list").append(listItem);
-  })
-}
+(function ($) {
+  $.fn.getFromStorage = () => {
+    if(localStorage.getItem("todoList")) {
+      todos = JSON.parse(localStorage.getItem("todoList"));
+      $(todos).each((i,elem) => {
+        let done = elem.done ? 'done' : '';
+        let listItem = `<li class="item"><span class="item-text ${done}">${elem.text}</span>
+          <button class="item-remove">Remove</button></li>`;
+        $(".list").append(listItem);
+      })
+    }
+  }
+})(jQuery);
+
+$(document).ready().getFromStorage();
 
 // add new item
 $add.click(function(e) {
@@ -31,12 +36,10 @@ $add.click(function(e) {
     $input.val("");
     localStorage.setItem("todoList", JSON.stringify(todos));
   }
-   
 });
 
 // remove item from the list
 $list.on("click", ".item-remove", function(e) {
-  debugger;
   e.preventDefault();
   let i = $list.children().index($(this).parent());
   $(this).parent().remove();
