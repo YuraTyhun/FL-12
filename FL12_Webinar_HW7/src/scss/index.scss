@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+
+  ul {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 20px;
+    list-style-type: square;
+
+    li {
+      background-color: aqua;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+.buttons {
+  h1 {
+    text-decoration: underline;
+  }
+  img:hover {
+    opacity: 0.8;
+  }
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.round {
+  font-weight: bold;
+}
+
+.player {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: blue;
+}
+
+.result {
+  font-weight: 600;
+  font-size: large;
+  color: black;
+  margin-bottom: 20px;
+}
