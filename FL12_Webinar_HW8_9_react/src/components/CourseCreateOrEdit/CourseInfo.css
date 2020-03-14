@@ -1,0 +1,79 @@
+.course-info {
+    color:#000;
+    background: #fff;
+    border-radius: 5px;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.fields {
+    width: 400px;
+    margin: 0 auto;
+    color: gray;
+}
+
+
+.name input, .description textarea {
+    width: 400px;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.duration input, .authors input, .date input {
+    width: 200px;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.save-btn {
+    width: 180px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(#33ecd8, #0995ee);
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 45px;
+    margin-bottom: 30px;
+}
+
+.cancel-btn {
+    width: 180px;
+    color: lightgray;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 45px;
+    margin-bottom: 30px;
+}
+
+.name::first-letter {
+    text-transform: uppercase;
+}
+.description::first-letter {
+    text-transform: uppercase;
+}
+.duration::first-letter {
+    text-transform: uppercase;
+}
+.authors::first-letter {
+    text-transform: uppercase;
+}
+.date::first-letter {
+    text-transform: uppercase;
+}
+

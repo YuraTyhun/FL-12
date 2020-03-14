@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Prerequisites",
+      "description": "Webpack, Angular CLI, TypeScript",
+      "duration": "01h 34min",
+      "authors": "Jane Doe",
+      "date": "2018-02-18"
+    },
+    {
+      "id": 2,
+      "name": "Components",
+      "description": "Components lifecycle",
+      "duration": "01h 15min",
+      "authors": "Sam Doe",
+      "date": "2018-02-01"
+    },
+    {
+      "id": 3,
+      "name": "Directives + Pipes",
+      "description": "Directives, types of directives, built-in directives, pipes",
+      "duration": "01h 34min",
+      "authors": "Mary Doe",
+      "date": "2018-01-15"
+    }
+   
+  ]
