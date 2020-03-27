@@ -1,0 +1,41 @@
+.game-title {
+	display: block;
+	margin-bottom: 30px;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center
+}
+
+.game {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 302px;
+	margin: 0 auto 50px;
+  border: 1px solid #000;
+}
+
+.game-item {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	line-height: 48px;
+	border: 1px solid #000;
+	cursor: pointer;
+  text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.game-item.o {
+	background-color: lightgreen
+}
+
+.game-item.x {
+	background-color: lightskyblue;
+}
+
+.wins-count {
+	text-align: center;
+	color: red	;
+}
